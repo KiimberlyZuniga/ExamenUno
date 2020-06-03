@@ -9,6 +9,18 @@ package Hospital;
  *
  * @author Kimbe
  */
-public class Hospital {
-    
+public enum Hospital {
+    // CONSTANTES
+    HospiMexico ("Hospital"), 
+    HospideNicoya ("Hospital de Nicoya");
+    //VARIABLES
+    private final String nombre;
+    //CONSTRUCTOR
+    private Hospital(String nombre) {
+        this.nombre = nombre;
+    }
+    //GETTER para obtener el nombre del enum
+    public String getNombre() {
+        return nombre;
+    }
 }
