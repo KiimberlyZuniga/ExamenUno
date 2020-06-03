@@ -9,6 +9,8 @@ package Prueba;
  *
  * @author Kimbe
  */
-public class Covid19Prueba {
+public interface Covid19Prueba {
+    boolean isPositiveCase();
     
+    String getNombrePaciente();
 }
