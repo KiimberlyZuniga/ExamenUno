@@ -5,10 +5,35 @@
  */
 package Prueba;
 
+
+import Paciente.Paciente;
+
 /**
  *
- * @author Kimbe
+ * @author KimberlyZuniga
  */
-public class PruebaRapida {
+public class PruebaRapida implements Covid19Prueba {
+    private final Paciente paciente;
+    private boolean isPositiveRap = false;
     
+
+   public PruebaRapida(Paciente paciente){
+        this.paciente = paciente;
+        ejecutarPruebaRapida();}
+   
+  
+    
+     private void ejecutarPruebaRapida() {
+        isPositiveRap = paciente.getTemperaturaPaciente()>= 37 && paciente.vomito();
+    }
+
+    @Override
+    public boolean isPositiveCase() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getNombrePaciente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
