@@ -10,6 +10,8 @@ package Prueba;
  * @author Kimbe
  */
 public interface Covid19Prueba {
+    
+    //FIRMA DE METODOS
     boolean isPositiveCase();
     
     String getNombrePaciente();
