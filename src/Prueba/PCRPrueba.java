@@ -7,8 +7,20 @@ package Prueba;
 
 /**
  *
- * @author Kimbe
+ * @author KimberlyZuniga
  */
-public class PCRPrueba {
+
+//CLASE INMUTABLE (FINAL)
+public  final class PCRPrueba implements Covid19Prueba{
+
+    @Override
+    public boolean isPositiveCase() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getNombrePaciente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
