@@ -14,5 +14,5 @@ public interface Covid19Prueba {
     //FIRMA DE METODOS
     boolean isPositiveCase();
     
-    String getNombrePaciente();
+    String getNombrePacient();
 }

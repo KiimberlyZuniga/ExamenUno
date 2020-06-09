@@ -5,10 +5,28 @@
  */
 package Hospital;
 
+import Paciente.Paciente;
+import java.util.List;
+
 /**
  *
  * @author Kimbe
  */
-public class HospiMexico {
+public final class HospiMexico extends OMS { //HERENCIA
     
+    
+
+    public HospiMexico(List<Paciente> pacientee) {
+        super(pacientee);//COST CON HERENCIA
+    }
+
+    @Override
+    protected Hospital getNombreHospital() {
+        return Hospital.HospiMexico;
+    }
+
+    @Override
+    protected boolean isGAMHospital() {
+        return true;
+    }
 }

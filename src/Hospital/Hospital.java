@@ -11,8 +11,8 @@ package Hospital;
  */
 public enum Hospital {
     // CONSTANTES
-    HospiMexico ("Hospital"), 
-    HospideNicoya ("Hospital de Nicoya");
+    HospiMexico ("HOSPITAL MEXICO"), 
+    HospideNicoya ("HOSPITAL NICOYA");
     //VARIABLES
     private final String nombre;
     //CONSTRUCTOR

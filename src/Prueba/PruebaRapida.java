@@ -5,7 +5,6 @@
  */
 package Prueba;
 
-
 import Paciente.Paciente;
 
 /**
@@ -13,27 +12,28 @@ import Paciente.Paciente;
  * @author KimberlyZuniga
  */
 public class PruebaRapida implements Covid19Prueba {
+
     private final Paciente paciente;
     private boolean isPositiveRap = false;
-    
 
-   public PruebaRapida(Paciente paciente){
+    public PruebaRapida(Paciente paciente) {
         this.paciente = paciente;
-        ejecutarPruebaRapida();}
-   
-  
-    
-     private void ejecutarPruebaRapida() {
-        isPositiveRap = paciente.getTemperaturaPaciente()>= 37 && paciente.vomito();
+        ejecutarPruebaRapida();
+    }
+
+    private void ejecutarPruebaRapida() {
+        isPositiveRap = paciente.getTemperaturaPaciente() >= 37 && paciente.vomito();
+        
     }
 
     @Override
     public boolean isPositiveCase() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return isPositiveRap;
     }
 
     @Override
-    public String getNombrePaciente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getNombrePacient() {
+        return paciente.getNombrePacient();
+
     }
 }

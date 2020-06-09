@@ -11,32 +11,33 @@ import Paciente.Paciente;
  *
  * @author KimberlyZuniga
  */
-
 //CLASE INMUTABLE (FINAL)
-public  final class PCRPrueba implements Covid19Prueba{
-    private boolean isPositive = false;
+public final class PCRPrueba implements Covid19Prueba {
+
+    private boolean isPositivePCR = false;
     private final Paciente paciente;
 
     //Const de obj tipo paciente
     public PCRPrueba(Paciente paciente) {
         this.paciente = paciente;
+        ejecutarPrueba();
     }
 
-    
     @Override
     public boolean isPositiveCase() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return isPositivePCR;
     }
 
     @Override
-    public String getNombrePaciente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getNombrePacient() {
+
+        return paciente.getNombrePacient();
     }
-    
-    
+
     //metodo da positivo si la temp es = o > a 39
-      private void ejecutarPrueba() {
-        isPositive = paciente.getTemperaturaPaciente()>= 39 && paciente.vomito();
+    private void ejecutarPrueba() {
+        
+        isPositivePCR = paciente.getTemperaturaPaciente() >= 39 && paciente.vomito();
     }
-    
+
 }

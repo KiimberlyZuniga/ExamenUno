@@ -5,10 +5,27 @@
  */
 package Hospital;
 
+import Paciente.Paciente;
+import java.util.List;
+
 /**
  *
  * @author Kimbe
  */
-public class HospiNicoya {
-    
+public final class HospiNicoya extends OMS {//Herencia
+
+    public HospiNicoya(List<Paciente> pacientee) {
+        super(pacientee);//constructor con herencia
+    }
+
+    @Override
+    protected Hospital getNombreHospital() {
+        return Hospital.HospideNicoya;
+    }
+
+    @Override
+    protected boolean isGAMHospital() {
+        return true;
+    }
+
 }

@@ -34,18 +34,24 @@ public abstract class OMS {
         for (Paciente paciente : pacientee) {
             if (isGAMHospital()) {
                 resultList.add(new PCRPrueba(paciente));
+                
             } else {
                 resultList.add((Covid19Prueba) new PruebaRapida(paciente));
+               
             }
         }
     }
 
     public final void printReport() {
-        System.out.println("Resultado del hospital" + getNombreHospital().getNombre());
+        System.out.println("********************************");
+        System.out.println("Resultado del:  " + getNombreHospital().getNombre());
+        System.out.println("********************************");
         for (Covid19Prueba resultado : resultList) {
-            System.out.println("-----------");
-            System.out.println("nombre = " + resultado.getNombrePaciente());
+            System.out.println("|------------------------------|");
+            System.out.println("nombre = " + resultado.getNombrePacient());
             System.out.println("es caso positivo = " + resultado.isPositiveCase());
+           
+            
 
         }
     }
